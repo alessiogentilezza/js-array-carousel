@@ -6,14 +6,15 @@
 
 body {
     font-family: 'Courier New', Courier, monospace;
-    padding: 20px;
-    background-color: aqua;
+    /* padding: 20px; */
+    /* background-color: aqua; */
 }
 
 .container {
-    width:80vw;
-    margin: 0 auto;
-    border: 1px solid black;
+
+    width: 90vw;
+    margin: auto;
+    /* border: 1px solid black; */
     /* background-color: #b91547; */
     /* text-align: center;
     border-radius: 10px; */
@@ -23,39 +24,56 @@ body {
     transform: translate(-50%, -50%);
 
 }
+
 .small-container {
+    position: relative;
     height: 80vh;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
 }
+
 .img-container {
     height: 100%;
-
+    text-align:center;
 }
+
 .wrapper-img {
     height: 100%;
     display: none;
 }
 
-.img-dim {
-    object-fit: contain;
-    width: 100%;
+img {
+    object-fit: cover;
     height: 100%;
+    width: 100%;
 }
 
 .d-block {
     display: block;
 }
+
 .d-none {
     display: none;
 }
 
 button {
-    margin: 10px;
-    padding: 5px;
-    border-radius: 20px;
+    border-radius: 50%;
+    border: none;
+    height: 30px;
+    width: 30px;
+    background-color: rgba(245, 239, 239, 0.5);
+    cursor: pointer;
 }
 
 .btn1 {
-    
+    position: absolute;
+    top: 10px;
+    left: 50%;
+
+}
+.btn2 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+
 }

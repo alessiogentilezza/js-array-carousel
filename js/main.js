@@ -12,7 +12,7 @@ let containerImgContent = "";
 
 for (let i = 0; i < imgArray.length; i++) {
     const imgWrapper = `<div class="wrapper-img">
-                                <img class="img-dim" src="${imgArray[i]}">
+                                <img src="${imgArray[i]}">
                             </div>`;
     containerImgContent += imgWrapper;
 }
