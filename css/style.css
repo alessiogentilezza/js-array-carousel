@@ -11,20 +11,20 @@ body {
 }
 
 .container {
-    width:70vw;
+    width:80vw;
     margin: 0 auto;
     border: 1px solid black;
     /* background-color: #b91547; */
     /* text-align: center;
     border-radius: 10px; */
-    /* position: absolute;
+    position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
 
 }
 .small-container {
-    height: 70vh;
+    height: 80vh;
     border: 1px solid red;
 
 }
@@ -37,7 +37,7 @@ body {
     display: none;
 }
 
-img {
+.img-dim {
     object-fit: contain;
     width: 100%;
     height: 100%;

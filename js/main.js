@@ -10,9 +10,9 @@ const containerImg = document.querySelector('.img-container');
 
 let containerImgContent = "";
 
-for (let i = 0; i < imgArray; i++) {
+for (let i = 0; i < imgArray.length; i++) {
     const imgWrapper = `<div class="wrapper-img">
-                                <img src="${imgArray[i]}">
+                                <img class="img-dim" src="${imgArray[i]}">
                             </div>`;
     containerImgContent += imgWrapper;
 }
@@ -20,14 +20,14 @@ for (let i = 0; i < imgArray; i++) {
 containerImg.innerHTML = containerImgContent;
 
 const wrapperImg = document.getElementsByClassName('wrapper-img');
+console.log(wrapperImg);
 
 let activeImage = 0;
 
 wrapperImg[activeImage].classList.add('d-block');
 
-// console.log(wrapperImg);
-
 const nextDom = document.querySelector('#next');
+const prevDom = document.querySelector('#prev');
 
 nextDom.addEventListener('click',
     function () {
@@ -37,6 +37,9 @@ nextDom.addEventListener('click',
             activeImage++;
             wrapperImg[activeImage].classList.add('d-block');
 
+            if (activeImage == wrapperImg.length - 1) {
+                nextDom.classList.add('d-none');
+            }
         }
     }
 );
