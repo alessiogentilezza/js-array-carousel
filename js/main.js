@@ -37,9 +37,28 @@ nextDom.addEventListener('click',
             activeImage++;
             wrapperImg[activeImage].classList.add('d-block');
 
+            prevDom.classList.remove('d-none');
+
             if (activeImage == wrapperImg.length - 1) {
                 nextDom.classList.add('d-none');
             }
         }
     }
+);
+
+prevDom.addEventListener('click',
+function () {
+    if (activeImage > 0) {
+
+        wrapperImg[activeImage].classList.remove('d-block');
+        activeImage--;
+        wrapperImg[activeImage].classList.add('d-block');
+
+        nextDom.classList.remove('d-none');
+
+        if (activeImage == 0) {
+            prevDom.classList.add('d-none');
+        }
+    }
+}
 );
