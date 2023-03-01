@@ -7,24 +7,32 @@ const imgArray = [
 ];
 
 const containerImg = document.querySelector('.img-container');
+const containerImgThumble = document.querySelector('.img-container-thumble');
 
-let containerImgContent="";
+let containerImgContent = "";
+let containerImgContentThumble = "";
 
 for (let i = 0; i < imgArray.length; i++) {
     const imgWrapper = `<div class="wrapper-img">
                                 <img src="${imgArray[i]}">
                             </div>`;
+    const imgWrapperThumble = `<div class="wrapper-img-thumble">
+                                    <img src="${imgArray[i]}">
+                                </div>`;
     containerImgContent += imgWrapper;
+    containerImgContentThumble += imgWrapperThumble;
 }
 
 containerImg.innerHTML = containerImgContent;
+containerImgThumble.innerHTML = containerImgContentThumble;
 
 const wrapperImg = document.getElementsByClassName('wrapper-img');
-console.log(wrapperImg);
+const wrapperImgThumble = document.getElementsByClassName('wrapper-img-thumble');
 
 let activeImage = 0;
 
 wrapperImg[activeImage].classList.add('d-block');
+// wrapperImgThumble[activeImage].classList.add('d-block');
 
 const nextDom = document.querySelector('#next');
 const prevDom = document.querySelector('#prev');
