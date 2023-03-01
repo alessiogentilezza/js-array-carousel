@@ -32,7 +32,8 @@ const wrapperImgThumble = document.getElementsByClassName('wrapper-img-thumble')
 let activeImage = 0;
 
 wrapperImg[activeImage].classList.add('d-block');
-// wrapperImgThumble[activeImage].classList.add('d-block');
+wrapperImgThumble[activeImage].classList.add('brightness');
+
 
 const nextDom = document.querySelector('#next');
 const prevDom = document.querySelector('#prev');
@@ -45,23 +46,17 @@ nextDom.addEventListener('click',
         console.log(activeImage);
 
         wrapperImg[activeImage].classList.remove('d-block');
-        
-        wrapperImgThumble[activeImage].classList.add('brightness');
-
+        wrapperImgThumble[activeImage].classList.remove('brightness');
 
         if (activeImage == wrapperImg.length - 1) {
             activeImage = 0;
         } else {
             activeImage = activeImage + 1;
         }
-
         console.log(activeImage);
 
         wrapperImg[activeImage].classList.add('d-block');
-
-        wrapperImgThumble[activeImage].classList.remove('brightness');
-
-
+        wrapperImgThumble[activeImage].classList.add('brightness');
     }
 );
 
@@ -69,6 +64,8 @@ prevDom.addEventListener('click',
     function () {
 
         wrapperImg[activeImage].classList.remove('d-block');
+        wrapperImgThumble[activeImage].classList.remove('brightness');
+
 
         if (activeImage == 0) {
             activeImage = wrapperImg.length - 1;
@@ -77,5 +74,7 @@ prevDom.addEventListener('click',
         }
 
         wrapperImg[activeImage].classList.add('d-block');
+        wrapperImgThumble[activeImage].classList.add('brightness');
+
     }
 );

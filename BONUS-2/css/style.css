@@ -41,11 +41,12 @@ body {
 .wrapper-img-thumble {
     height: 100%;
     /* display: none; */
-    filter: brightness(0.4);
+    filter: brightness(0.3);
 
 }
 .wrapper-img-thumble.brightness {
     filter: brightness(1);
+    border: solid 5px rgba(245, 239, 239, 0.5);
 
 }
 
