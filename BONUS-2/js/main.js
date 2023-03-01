@@ -45,15 +45,22 @@ nextDom.addEventListener('click',
         console.log(activeImage);
 
         wrapperImg[activeImage].classList.remove('d-block');
+        
+        wrapperImgThumble[activeImage].classList.add('brightness');
+
 
         if (activeImage == wrapperImg.length - 1) {
             activeImage = 0;
         } else {
             activeImage = activeImage + 1;
         }
+
         console.log(activeImage);
 
         wrapperImg[activeImage].classList.add('d-block');
+
+        wrapperImgThumble[activeImage].classList.remove('brightness');
+
 
     }
 );
